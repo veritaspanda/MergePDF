@@ -14,7 +14,7 @@ namespace MergePDF
     {
         static void Main(string[] args)
         {
-            MergePDF(@"C:\TEMP\PDF1.pdf", @"C:\TEMP\PDF2.pdf", @"C:\TEMP\PDF3.pdf", @"C:\TEMP\PDF4.pdf", @"C:\TEMP\PDF5.pdf", @"C:\TEMP\PDF6.pdf");
+            MergePDF(@"C:\MergePDF\Input\PDF1.pdf", @"C:\MergePDF\Input\PDF2.pdf");
         }
 
         private static void MergePDF(string File1, string File2, string File3 = null, string File4 = null, string File5 = null, string File6 = null, string File7 = null, string File8 = null, string File9 = null, string File10 = null)
@@ -106,7 +106,7 @@ namespace MergePDF
             Document sourceDocument = null;
             PdfCopy pdfCopyProvider = null;
             PdfImportedPage importedPage;
-            string outputPdfPath = @"C:\TEMP\mergedPdf.pdf";
+            string outputPdfPath = @"C:\MergePDF\Output\mergedPdf.pdf";
 
             sourceDocument = new Document();
             pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
